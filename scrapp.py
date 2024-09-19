@@ -27,7 +27,6 @@
 #we are no longer using 3rd party browser for scraping with captcha required websites and above code works for that
 
 
-
 import streamlit as st
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
@@ -37,22 +36,22 @@ from webdriver_manager.core.os_manager import ChromeType
 from bs4 import BeautifulSoup
 import time
 
-@st.cache_resource
-def get_driver():
+def create_driver():
     options = Options()
     options.add_argument("--disable-gpu")
     options.add_argument("--headless")
     options.add_argument("--no-sandbox")
     options.add_argument("--disable-dev-shm-usage")
     
-    return webdriver.Chrome(
+    driver = webdriver.Chrome(
         service=Service(ChromeDriverManager(chrome_type=ChromeType.CHROMIUM).install()),
         options=options
     )
+    return driver
 
 def scrape_website(website):
     print("Launching Chrome...")
-    driver = get_driver()
+    driver = create_driver()
     
     try:
         driver.get(website)
@@ -87,3 +86,4 @@ def split_dom_content(dom_content, max_length=6000):
     ]
 
 print("successful execution")
+
