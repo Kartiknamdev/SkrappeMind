@@ -1,0 +1,14 @@
+streamlit 
+langchain 
+langchain_ollama
+google-generativeai
+groq
+langchain-google-genai
+langchain-groq
+selenium
+seleniumbase
+webdriver_manager
+beautifulsoup4
+lxml 
+html5lib
+python-dotenv
