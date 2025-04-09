@@ -39,6 +39,8 @@
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_groq import ChatGroq
 from langchain_google_genai import ChatGoogleGenerativeAI
+from langchain_openai import ChatOpenAI
+from langchain_anthropic import ChatAnthropic
 import os
 
 template = (
@@ -63,6 +65,17 @@ def get_model(model_name):
             temperature=0,
             google_api_key=os.environ["GOOGLE_API_KEY"]
         )
+    elif model_name == "openai":
+        return ChatOpenAI(
+            model="gpt-4-turbo",
+            temperature=0,
+            openai_api_key=os.environ["OPENAI_API_KEY"]
+        )
+    elif model_name == "claude":
+        return ChatAnthropic(
+            model="claude-3-sonnet-20240229",
+            temperature=0,
+            anthropic_api_key=os.environ["ANTHROPIC_API_KEY"]
     else:
         raise ValueError(f"Unsupported model: {model_name}")
 
