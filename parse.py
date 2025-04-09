@@ -76,6 +76,7 @@ def get_model(model_name):
             model="claude-3-sonnet-20240229",
             temperature=0,
             anthropic_api_key=os.environ["ANTHROPIC_API_KEY"]
+        )
     else:
         raise ValueError(f"Unsupported model: {model_name}")
 
