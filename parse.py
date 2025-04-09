@@ -65,13 +65,13 @@ def get_model(model_name):
             temperature=0,
             google_api_key=os.environ["GOOGLE_API_KEY"]
         )
-    elif model_name == "openai":
+    elif model_name == "OpenaAI":
         return ChatOpenAI(
             model="gpt-4-turbo",
             temperature=0,
             openai_api_key=os.environ["OPENAI_API_KEY"]
         )
-    elif model_name == "claude":
+    elif model_name == "Claude":
         return ChatAnthropic(
             model="claude-3-sonnet-20240229",
             temperature=0,
