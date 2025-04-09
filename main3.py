@@ -7,7 +7,7 @@ import requests
 from datetime import datetime
 
 os.environ["GROQ_API_KEY"] = "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"
-os.environ["GOOGLE_API_KEY"] = "AIzaSyC7mC1rGewMovMcln4lu1WcxCkyt4EnHwU"
+os.environ["GOOGLE_API_KEY"] = "AIzaSyC_oCg6ildF7YxMhXR8mXMO2VybhwEcX5Y"
 os.environ["NEWS_API_KEY"] = "pub_53500605d985b9a375bbaa4c8af8c3a3378c0"
 
 st.set_page_config(layout="wide")
