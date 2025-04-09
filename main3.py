@@ -9,6 +9,8 @@ from datetime import datetime
 os.environ["GROQ_API_KEY"] = "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"
 os.environ["GOOGLE_API_KEY"] = "AIzaSyC_oCg6ildF7YxMhXR8mXMO2VybhwEcX5Y"
 os.environ["NEWS_API_KEY"] = "pub_53500605d985b9a375bbaa4c8af8c3a3378c0"
+os.environ["ANTHROPIC_API_KEY"] = "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"
+os.environ["OPENAI_API_KEY"] = "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"
 
 st.set_page_config(layout="wide")
 query='cybersecurity'
@@ -50,7 +52,7 @@ col1, col2 = st.columns([3, 1])
 
 with col1:
     url = st.text_input("ENTER THE URL OF THE WEBPAGE!!")
-    model_choice = st.selectbox("Select the model for parsing", ("groq", "gemini"), index=0)
+    model_choice = st.selectbox("Select the model for parsing", ("groq", "gemini","OpenAI","Claude"), index=0)
 
     if st.button("DIG IN"):
         if url:
