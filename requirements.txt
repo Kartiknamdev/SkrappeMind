@@ -2,6 +2,7 @@ streamlit
 langchain 
 langchain_ollama
 langchain-openai
+langchain-anthropic
 google-generativeai
 groq
 langchain-google-genai
