@@ -67,16 +67,17 @@ def get_model(model_name):
         )
     elif model_name == "OpenaAI":
         return ChatOpenAI(
-            model="gpt-4-turbo",
+            model="gpt-3.5-turbo",
             temperature=0,
             openai_api_key=os.environ["OPENAI_API_KEY"]
         )
-    elif model_name == "Claude":
-        return ChatAnthropic(
-            model="claude-3-sonnet-20240229",
+    elif model_name == "GPT 4":
+        return ChatOpenAI(
+            model="gpt-4",
             temperature=0,
-            anthropic_api_key=os.environ["ANTHROPIC_API_KEY"]
+            openai_api_key=os.environ["OPENAI_API_KEY"]
         )
+    
     else:
         raise ValueError(f"Unsupported model: {model_name}")
 
