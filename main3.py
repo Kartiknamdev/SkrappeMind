@@ -6,7 +6,7 @@ from parse import parse_with_llm
 import requests
 from datetime import datetime
 
-os.environ["GROQ_API_KEY"] = "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"
+os.environ["GROQ_API_KEY"] = "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"
 os.environ["GOOGLE_API_KEY"] = "AIzaSyC7mC1rGewMovMcln4lu1WcxCkyt4EnHwU"
 os.environ["NEWS_API_KEY"] = "pub_53500605d985b9a375bbaa4c8af8c3a3378c0"
 
